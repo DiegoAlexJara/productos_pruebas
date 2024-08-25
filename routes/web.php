@@ -6,4 +6,4 @@ use Illuminate\Support\Facades\Route;
 
 Route::get('/', [UserController::class, "inicio"]);
 
-Route::resource('productos',ProductController::class);
+Route::resource('productos', ProductController::class);
