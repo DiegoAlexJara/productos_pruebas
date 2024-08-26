@@ -72,3 +72,4 @@
         <input type="submit" value="Crear">
 
     </form>
+@endsection

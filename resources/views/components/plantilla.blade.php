@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>@yield('title')</title>
+    <link rel="stylesheet" href="{{ asset('css/app.css') }}">
 
     {{-- Cuando agregues un CDN o cualquier cosa en el head, pon un comentario para saber que es --}}
 
@@ -18,11 +19,15 @@
 </head>
 
 <body>
+    <div class="container">
+        @include('components.nav-bar')
+    </div>
 
     {{-- Puedes encapsular todo el contenido de la directiva yield en un div o una etiqueta section con una clase --}}
-    {{-- <div class="container mt-5"> --}}
-    @yield('content')
-    {{-- </div> --}}
+
+    <div class="container mt-5">
+        @yield('content')
+    </div>
 </body>
 
 </html>

@@ -1,3 +1,22 @@
-body{
-    text-align: center;
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    text-align: center; /* Centra el texto en todo el cuerpo */
+}
+
+.container {
+    display: flex;
+    justify-content: center; /* Centra el nav-bar horizontalmente */
+    margin-top: 3rem; /* Espaciado superior para el contenedor */
+}
+
+.nav-bar {
+    width: 80%; /* Ancho del nav-bar */
+    text-align: center; /* Centra el texto dentro del nav-bar */
+}
+
+.nav-bar a {
+    text-decoration: none;
+    color: black;
+    margin: 0 1rem; /* Espaciado entre enlaces */
 }

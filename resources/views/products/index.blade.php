@@ -52,7 +52,4 @@
             @endforeach
         </tbody>
     </table>
-    <a href="{{ route('productos.create') }}"><button>Nuevo Producto</button></a>
-
-    {{-- Te falto poner el @endsection --}}
 @endsection

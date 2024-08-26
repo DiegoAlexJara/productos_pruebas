@@ -4,6 +4,7 @@ use App\Http\Controllers\ProductController;
 use App\Http\Controllers\UserController;
 use Illuminate\Support\Facades\Route;
 
-Route::get('/', [UserController::class, "inicio"]);
+Route::get('/', [UserController::class, "inicio"])
+    ->name('home');
 
 Route::resource('productos', ProductController::class);
