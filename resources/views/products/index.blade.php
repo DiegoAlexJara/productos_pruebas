@@ -5,7 +5,11 @@
 @section('content')
     <h1 class="text-center mb-4">LISTA DE PRODUCTOS</h1>
 
-
+    @session('success')
+    <div class="alert alert-primary" role="alert">
+        {{ session('success') }}
+    </div>
+    @endsession
     {{-- BootStrap tiene diferentes estilos de tablas, puedes revisarlas en su documentacion --}}
     <table class="table">
         <thead>

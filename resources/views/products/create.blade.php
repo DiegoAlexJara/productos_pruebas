@@ -16,40 +16,55 @@
         <br>
         <label for="">
             Nombre
-            <input type="text" name="name" id="name">
+            <input type="text" name="name" id="name" value="{{old('name')}}">
         </label>
+        @error('name')
+            <p>{{ $message }}</p>
+        @enderror
 
         <br>
         <br>
 
         <label for="">
             Descripcion
-            <input type="text" name="descripcion" id="descripcion">
+            <input type="text" name="descripcion" id="descripcion" value="{{old('descripcion')}}">
         </label>
+        @error('descripcion')
+            <p>{{ $message }}</p>
+        @enderror
 
         <br>
         <br>
 
         <label for="">
             Precio
-            <input type="number" name="price" id="price" min="1">
+            <input type="number" name="price" id="price" min="1" value="{{old('price')}}">
         </label>
+        @error('price')
+            <p>{{ $message }}</p>
+        @enderror
 
         <br>
         <br>
 
         <label for="">
             Categoria
-            <input type="text" name="category" id="category">
+            <input type="text" name="category" id="category" value="{{old('category')}}">
         </label>
+        @error('category')
+            <p>{{ $message }}</p>
+        @enderror
 
         <br>
         <br>
 
         <label for="">
             Marca
-            <input type="text" name="marca" id="marca">
+            <input type="text" name="marca" id="marca" value="{{old('marca')}}">
         </label>
+        @error('marca')
+            <p>{{ $message }}</p>
+        @enderror
 
         <br>
         <br>
