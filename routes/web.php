@@ -14,8 +14,15 @@ Route::get('/', [AuthController::class, 'showLoginForm'])
 Route::post('/', [AuthController::class, 'login'])
     ->name('login');
 
-Route::resource('productos', ProductController::class);
+Route::post('/logout', [AuthController::class, 'logout'])
+    ->name('logout');
 
-Route::resource('user', UserController::class);
+Route::resource('productos', ProductController::class)
+    ->middleware(RedirectIfAuthenticated::class);
 
-Route::get('/dashboard', [DashboardController::class, 'showInicio'])->name('dashboard')->middleware(AuthMiddleware::class);
+Route::resource('user', UserController::class)
+    ->middleware(RedirectIfAuthenticated::class);
+
+Route::get('/dashboard', [DashboardController::class, 'showInicio'])
+    ->name('dashboard')
+    ->middleware(AuthMiddleware::class);

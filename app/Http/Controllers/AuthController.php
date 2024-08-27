@@ -7,6 +7,7 @@ use Illuminate\Http\Request;
 
 class AuthController extends Controller
 {
+    
     public function showLoginForm(){
         return view('Inicio');
     }
@@ -20,5 +21,20 @@ class AuthController extends Controller
         }
 
         return redirect()->intended('dashboard');
+    }
+    public function logout(Request $request){
+
+        // Cerrar la sesión del usuario
+        Auth::logout();
+
+        // Invalidar la sesión actual
+        $request->session()->invalidate();
+
+        // Regenerar el token de la sesión
+        $request->session()->regenerateToken();
+
+        // Redirigir al usuario a la página de inicio u otra página
+        return redirect()->route('login');
+
     }
 }
